@@ -29,4 +29,5 @@ urlpatterns = patterns('',
 #    url(r'^blog/', include('zinnia.urls.quick_entry')),
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$','djangoheroku.data.views.home',name='home')
 )

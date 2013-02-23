@@ -101,7 +101,14 @@
     width: 438px;
     z-index: 100;
 }
-
+.overview {
+    background: rgb(0,48,94) url('images/sprite2.png') repeat-x bottom;
+    background-color: rgba(32,32,32,0.25);
+    border-bottom: 1px solid #303030;
+    border-bottom-color: rgba(0,0,0,0.4);
+    margin: -10px -15px 0;
+    padding: 5px 0 5px 15px;
+}
 .sidebar-inner {
 	margin: 50px 0px 0px 0px;
 	
@@ -120,4 +127,32 @@
 
 .nav li {
 	margin-left: 10px;
+}
+
+/* --------------------------------------
+  Markup free clearing
+  Details: http: //perishablepress.com/press/2009/12/06/new-clearfix-hack
+----------------------------------------- */
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  }
+
+* html .clearfix { height: 1%; } /* IE6 */
+*:first-child + html .clearfix { min-height: 1%; } /* IE7 */
+
+
+#sidebarfooter {
+      background: rgb(0,48,94) url('images/sprite2.png') repeat-x bottom;
+    background-color: rgba(32,32,32,0.25);
+    border-bottom: 1px solid #303030;
+    border-bottom-color: rgba(0,0,0,0.4);
+    bottom:0;
+    position:absolute;
+    width: 100%;
+    margin: 0px -5px 0;
+    padding: 5px 0 5px 15px;
 }
