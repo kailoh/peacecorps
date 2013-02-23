@@ -1,5 +1,7 @@
 from django.db import models
 from django_options import *
+from django.contrib import admin
+admin.autodiscover()
 
 class Country(models.Model):
     name = models.CharField(max_length = 48, choices = COUNTRY_NAME_CHOICES)
@@ -64,3 +66,6 @@ class Teacher(models.Model):
     keywords = models.ForeignKey(Keyword, verbose_name = "list of keywords")
     class Meta:
         app_label = 'django_model'
+
+admin.site.register(Teacher)
+admin.site.register(Volunteer)
