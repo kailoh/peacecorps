@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'peacecorps.views.home', name='home'),
     # url(r'^peacecorps/', include('peacecorps.foo.urls')),
     url(r'^admin/', include(admin.site.urls)),
-        url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls'))
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
