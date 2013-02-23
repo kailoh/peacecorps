@@ -1,0 +1,9 @@
+.zoomer {
+	position:absolute;
+	top:auto;
+	bottom:10px;
+}
+
+.map-mm {
+	display:none;
+}
