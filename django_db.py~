@@ -1,6 +1,10 @@
 from django_model import *
 
 class DB:
+    def Init():
+        #Initialize the database
+        print "s"
+
     #InsertTeacher inserts a new teacher into the database and 
     #immediately saves the entry. A new user account is created for the new
     #entry.
@@ -14,9 +18,7 @@ class DB:
             school = School(school_name, school_addr1, school_addr2, 
                             school_city, school_state, school_zip)
             school.save()
-        teacher = Teacher(first_name, last_name, school, phone, email, grade,
-                          num_students, keywords)
-        teacher.save()
+        teacher
 
     
     #InsertVolunteer inserts a new volunteer into the database and 
@@ -35,11 +37,13 @@ class DB:
     #formatted to be rendered on the map. Specifying null for any search term
     #will prohibit any filtering along that category.
     def QueryTeachers(school, state, grade, num_students):
-        return 
+#        Do something h
+        print "s"
 
     #QueryVolunteers returns a list of volunteers that fit into all of the 
     #specified search terms. Each element of the list is appropriately 
     #formatted to be rendered on the map. Specifying null for any search term
     #will prohibit any filtering along that category.
     def QueryVolunteers(countries, sectors, home_states, keywords):
-        Volunteer.object.
+ #       Do something here
+        print "s"

@@ -1,6 +1,9 @@
 from django.db import models
 from django_options import *
 
+class Country(models.Model):
+    name = models.CharField(max_length = 48, choice = COUNTRY_NAME_CHOICES)
+
 class Volunteer(models.Model):
     first_name = models.CharField(max_length = 48)
     last_name = models.CharField(max_length = 48)
@@ -12,9 +15,6 @@ class Volunteer(models.Model):
     email = models.CharField(max_length = 48, verbose_name = "email address")
     language = models.CharField(max_length = 48, verbose_name = "primary language of communication in the field")
     keywords = models.OneToManyField(Keyword, verbose_name = "list of keywords")
-
-class Country(models.Model):
-    name = models.CharField(max_length = 48)
 
 class Sector(models.Model):
     name = models.CharField(max_length = 48)
