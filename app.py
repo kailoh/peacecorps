@@ -7,7 +7,7 @@ def hello():
     return "Hello from Python!"
 
 @app.route("/hi")
-def hello():
+def hellot():
     return "Hello from Thad!"
 
 
