@@ -34,7 +34,7 @@ class Teacher(models.Model):
     email = models.CharField(max_length = 48, verbose_name = "email address")
     grade = models.CharField(max_length = 2, verbose_name = "grade of students", choices=GRADES)
     num_students = models.IntegerField(verbose_name = "number of students")
-    keywords models.OneToManyField(Keyword, verbose_name = "list of keywords")
+    keywords = models.OneToManyField(Keyword, verbose_name = "list of keywords")
 
 class Grade(models.Model):
     grade = models.IntegerField()

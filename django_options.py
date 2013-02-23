@@ -1,6 +1,6 @@
 COUNTRY_NAME_CHOICES = (
     (u"AL", u"Albania"),
-    (u"AM", u"Armenia")
+    (u"AM", u"Armenia"),
     (u"AZ", u"Azerbaijan"),
     (u"BZ", u"Belize"),
     (u"BJ", u"Benin"),
@@ -57,11 +57,11 @@ COUNTRY_NAME_CHOICES = (
     (u"SN", u"Senegal"),
     (u"SL", u"Sierra Leone"),
     (u"ZA", u"South Africa"),
-    (u"SR", u"Suriname")
+    (u"SR", u"Suriname"),
     (u"SZ", u"Swaziland"),
     (u"TZ", u"Tanzania"),
     (u"GM", u"The Gambia"),
-    (u"TH", u"Thailand")
+    (u"TH", u"Thailand"),
     (u"TG", u"Togo"),
     (u"TO", u"Tnoga"),
     (u"UG", u"Uganda"),
