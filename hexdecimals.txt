@@ -1,0 +1,6 @@
+HEXDECIMAL COLORS
+-----------------
+
+#226ab2 - Light Blue
+#082239 - Dark Blue
+#268924 - Green
