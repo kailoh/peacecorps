@@ -112,9 +112,6 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
-TEMPLATE_CONTEXT_PROCESSORS= (
-"django.contrib.messages.context_processors.messages"
-}
 
 INSTALLED_APPS = (
     'django.contrib.auth',
