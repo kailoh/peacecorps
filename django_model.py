@@ -3,43 +3,45 @@ from django_options import *
 
 class Country(models.Model):
     name = models.CharField(max_length = 48, choices = COUNTRY_NAME_CHOICES)
+    def __unicode__(self): #Tell it to return as a unicode string (The name of the to-do item) rather than just Object.  
+        return self.name
     class Meta:
-        app_label = 'test'
+        app_label = 'django_model'
 
 class Sector(models.Model):
     name = models.CharField(max_length = 48)
     class Meta:
-        app_label = 'test'
+        app_label = 'django_model'
 
 class Subsector(models.Model):
     name = models.CharField(max_length = 48)
-    sector = models.OneToOneField(Sector)
+    sector = models.ForeignKey(Sector)
     class Meta:
-        app_label = 'test'
+        app_label = 'django_model'
 
 class Keyword(models.Model):
     name = models.CharField(max_length = 48)
     class Meta:
-        app_label = 'test'
+        app_label = 'django_model'
 
 class Volunteer(models.Model):
     first_name = models.CharField(max_length = 48)
     last_name = models.CharField(max_length = 48)
     home_state = models.CharField(max_length = 2, choices = "STATES")
-    country = models.OneToOneField(Country, verbose_name = "country of service")
-    sector = models.OneToOneField(Subsector, verbose_name = "sector of service")
+    country = models.ForeignKey(Country, verbose_name = "country of service")
+    sector = models.ForeignKey(Subsector, verbose_name = "sector of service")
     start_date = models.DateField(verbose_name = "start date of service")
     end_date = models.DateField(verbose_name = "end date of service")
     email = models.CharField(max_length = 48, verbose_name = "email address")
     language = models.CharField(max_length = 48, verbose_name = "primary language of communication in the field")
     keywords = models.ForeignKey(Keyword, verbose_name = "list of keywords")
     class Meta:
-        app_label = 'test'
+        app_label = 'django_model'
 
 class Grade(models.Model):
     grade = models.IntegerField()
     class Meta:
-        app_label = 'test'
+        app_label = 'django_model'
 
 class School(models.Model):
     name = models.CharField(max_length = 80)
@@ -49,7 +51,7 @@ class School(models.Model):
     state = models.CharField(max_length = 2, verbose_name = "state abbreviation", choices = "STATES")
     zip = models.IntegerField()
     class Meta:
-        app_label = 'test'
+        app_label = 'django_model'
 
 class Teacher(models.Model):
     first_name = models.CharField(max_length = 48)
@@ -61,4 +63,4 @@ class Teacher(models.Model):
     num_students = models.IntegerField(verbose_name = "number of students")
     keywords = models.ForeignKey(Keyword, verbose_name = "list of keywords")
     class Meta:
-        app_label = 'test'
+        app_label = 'django_model'
