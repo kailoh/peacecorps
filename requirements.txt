@@ -1,7 +1,6 @@
 Flask==0.7.2
 Django==1.4.5
 psycopg2==2.4.6
-django-comments<=1.0.0
 dj-database-url==0.2.1
 PIL>=1.1.6
 django-mptt==0.5.1
