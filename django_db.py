@@ -1,47 +1,47 @@
-from django.db import models
+from django_model import *
 
-class Volunteer(models.Model):
-    first_name = models.CharField(max_length = 48)
-    last_name = models.CharField(max_length = 48)
-    home_state = models.CharField(max_length = 2, choices = "STATES")
-    country = models.OneToOneField(Country, verbose_name = "country of service")
-    sector = models.OneToOneField(Sector, verbose_name = "sector of service")
-    start_date = models.DateField(verbose_name = "start date of service")
-    end_date = models.DateField(verbose_name = "end date of service")
-    email = models.CharField(max_length = 48, verbose_name = "email address")
-    language = models.CharField(max_length = 48, verbose_name = "primary language of communication in the field")
-    keywords = models.OneToManyField(Keyword, verbose_name = "list of keywords")
+def class DB:
+    def Init():
+        #Initialize the database
+        s
 
-class Country(models.Model):
-    name = models.CharField(max_length = 48)
+    #InsertTeacher inserts a new teacher into the database and 
+    #immediately saves the entry. A new user account is created for the new
+    #entry.
+    def InsertTeacher(first_name, last_name, school_name, school_addr1,
+                        school_addr2, school_city, school_state, school_zip,
+                        phone, email, grade, num_students, keywords,
+                        password):
+        try:
+            school = School.get(school_name=school_name, school_zip=school_zip)
+        except:
+            school = School(school_name, school_addr1, school_addr2, 
+                            school_city, school_state, school_zip)
+            school.save()
+        teacher
 
-class Sector(models.Model):
-    name = models.CharField(max_length = 48)
+    
+    #InsertVolunteer inserts a new volunteer into the database and 
+    #immediately saves the entry. A new user account is created for the new
+    #entry.
+    def InsertVolunteer(first_name, last_name, home_state, country, sector,
+                        start_date, end_date, email, language, keywords,
+                        password):
+        volunteer = Volunteer(first_name, last_name, home_state, country, 
+                              sector, start_date, end_date, email, language,
+                              keyworks)
+        volunteer.save()
 
-class Subsector(models.Model):
-    name = models.CharField(max_length = 48)
-    sector = models.OneToOneField(Sector)
+    #QueryTeachers returns a list of teachers that fit into all of the 
+    #specified search terms. Each element of the list is appropriately 
+    #formatted to be rendered on the map. Specifying null for any search term
+    #will prohibit any filtering along that category.
+    def QueryTeachers(school, state, grade, num_students):
+        Do something h
 
-class Keywords(models.Model):
-    name = models.CharField(max_length = 48)
-
-class Teacher(models.Model):
-    first_name = models.CharField(max_length = 48)
-    last_name = models.CharField(max_length = 48)
-    school = models.ManyToOneField(School, "school")
-    phone = models.CharField(max_length=15, verbose_name="work phone")
-    email = models.CharField(max_length = 48, verbose_name = "email address")
-    grade = models.CharField(max_length = 2, verbose_name = "grade of students", choices=GRADES)
-    num_students = models.IntegerField(verbose_name = "number of students")
-    keywords models.OneToManyField(Keyword, verbose_name = "list of keywords")
-
-class Grade(models.Model):
-    grade = models.IntegerField()
-
-class School(models.Model):
-    name = models.CharField(max_length = 80)
-    addr1 = models.CharField(max_length = 80, verbose_name = "address line 1")
-    addr2 = models.CharField(max_length = 80, verbose_name = "address line 2")
-    city = models.CharField(max_length = 80)
-    state = models.CharField(max_length = 2, verbose_name = "state abbreviation", choices = "STATES")
-    zip = models.IntegerField()
+    #QueryVolunteers returns a list of volunteers that fit into all of the 
+    #specified search terms. Each element of the list is appropriately 
+    #formatted to be rendered on the map. Specifying null for any search term
+    #will prohibit any filtering along that category.
+    def QueryVolunteers(countries, sectors, home_states, keywords):
+        Do something here
