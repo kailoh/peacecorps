@@ -34,12 +34,19 @@ class DB:
     #specified search terms. Each element of the list is appropriately 
     #formatted to be rendered on the map. Specifying null for any search term
     #will prohibit any filtering along that category.
-    def QueryTeachers(school, state, grade, num_students):
-        return 
+    def QueryTeachers(state, grade, num_students):
+        objs = Teacher.objects.get(state__exact = state, grade__exact = grade,
+                                   num_students__exact = num_students)
+        return objs or None
 
     #QueryVolunteers returns a list of volunteers that fit into all of the 
     #specified search terms. Each element of the list is appropriately 
     #formatted to be rendered on the map. Specifying null for any search term
     #will prohibit any filtering along that category.
-    def QueryVolunteers(countries, sectors, home_states, keywords):
-        Volunteer.object.
+    def QueryVolunteers(country, sector, home_state, keyword):
+        objs = Volunteer.objects.get(country__exact = country, 
+                                     sector__exact = sector,
+                                     home_state__exact = home_state, 
+                                     keyword__exact = keyword)
+        return objs or None
+        
