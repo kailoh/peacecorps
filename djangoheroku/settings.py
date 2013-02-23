@@ -62,7 +62,7 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = 'http://peaceschool.herokuapp.com/static/'
+STATIC_URL = 'static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
