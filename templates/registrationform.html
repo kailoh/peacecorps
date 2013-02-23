@@ -1,0 +1,24 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Junge' rel='stylesheet' type='text/css'>
+<link href="{{ STATIC_URL }}main.css" rel="stylesheet">
+<title>Register Now!</title>
+</head>
+<body>
+<h1>Register For World Wise Schools</h1>
+<form id="registration" method="POST" action="/register/">
+{% csrf_token %}
+<table>
+{{ r_form }}
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am a:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<select name="profession" form="registration">
+<option value="teacher">teacher</option>
+<option value="volunteer">volunteer</option>
+</select><BR><BR><BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="Submit" value="REGISTER" />
+</form>
+</body>
+
+

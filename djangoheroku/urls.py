@@ -28,10 +28,6 @@ urlpatterns = patterns('',
 #    url(r'^blog/', include('zinnia.urls.quick_entry')),
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$','data.views.home',name='home')
-    # static media
-    #url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
-    #    {'document_root': settings.STATIC_ROOT}),
-    #url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-    #    {'document_root': settings.MEDIA_ROOT}),
+    url(r'^$','data.views.home',name='home'),
+    url(r'^register/$', views.register, name="register")
 )
