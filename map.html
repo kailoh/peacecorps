@@ -1,82 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
-  <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
-  <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-  <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-  <link href="styles/styles.css" rel="stylesheet">
+	<title>World Wise Schools by Peace Corps</title>
+	<script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></script>
+	<link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="chosen/chosen-style.css" rel="stylesheet">
+	<link href="styles/styles.css" rel="stylesheet">
+	<!--<link href="styles/refined.css" rel="stylesheet">-->
   
 </head>
 <body>
-      <!-- FOOTER -->
 
-    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container">
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-fixed-top">
           <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
             <div class="brand">World Wise Schools</div>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <!-- Place all navbar contents you want collapsed within .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-				<li>
-					<form class="navbar-search pull-left">
-						<input type="text" class="search-query" placeholder="Start typing to search">
+				<li class="search-1">	
+					<form class="navbar-search">
+						<input type="text" class="search-query span3" placeholder="Search">
 					</form>
 				</li>
-				
-				<li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown">Sector <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="nav-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-				
-				
-              </ul>
+				<li>
+					<div class="dropdown-select">
+						<select data-placeholder="Sector" class="chzn-select" tabindex="2">
+							<option value=""></option>
+							<option value="United States">United States</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Afghanistan">Afghanistan</option>
+							<option value="Aland Islands">Aland Islands</option>
+							<option value="Albania">Albania</option>
+							<option value="Algeria">Algeria</option>
+							<option value="American Samoa">American Samoa</option>
+						</select>
+					</div>
+				</li>	
+				<li>
+					<div class="dropdown-select">
+						<select data-placeholder="Country" class="chzn-select" tabindex="2">
+							<option value=""></option>
+							<option value="United States">United States</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Afghanistan">Afghanistan</option>
+							<option value="Aland Islands">Aland Islands</option>
+							<option value="Albania">Albania</option>
+							<option value="Algeria">Algeria</option>
+							<option value="American Samoa">American Samoa</option>
+						</select>
+					</div>
+				</li>	
+				<li>
+					<div class="dropdown-select">
+						<select data-placeholder="Home State" class="chzn-select" tabindex="2">
+							<option value=""></option>
+							<option value="United States">United States</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Afghanistan">Afghanistan</option>
+							<option value="Aland Islands">Aland Islands</option>
+							<option value="Albania">Albania</option>
+							<option value="Algeria">Algeria</option>
+							<option value="American Samoa">American Samoa</option>
+						</select>
+					</div>
+				</li>	
+				</ul>
+				<div class="rightmost">
+					<div class="btn-group">
+						<button class="btn">Text</button>
+						<button class="btn">Blog</button>
+					</div>
+				</div>
+			
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
 
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
-
+	<div class="sidebar">
+	<div class="sidebar-inner">
+	<ul class="nav nav-list">
+		<li class="nav-header">List header</li>
+		<li><a href="#">Library</a></li>
+	</ul>
+	</div>
+	</div>
+	
+	
 <div id='map'></div>
 
 
+
 <script>
-  mapbox.auto('map', 'kaiherng.map-i6vfq6ni');
+  mapbox.auto('map', 'ethanmax.map-drf7bifz');
 </script>
 
- <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap-transition.js"></script>
-    <script src="bootstrap/js/bootstrap-alert.js"></script>
-    <script src="bootstrap/js/bootstrap-modal.js"></script>
-    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
-    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
-    <script src="bootstrap/js/bootstrap-tab.js"></script>
-    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
-    <script src="bootstrap/js/bootstrap-popover.js"></script>
-    <script src="bootstrap/js/bootstrap-button.js"></script>
-    <script src="bootstrap/js/bootstrap-collapse.js"></script>
-    <script src="bootstrap/js/bootstrap-carousel.js"></script>
-    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
-    <script src="bootstrap/js/holder/holder.js"></script>
-	<script>$('.dropdown-toggle').dropdown()</script>
+	<script src="tooltip.js"></script>
+	<script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-transition.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-popover.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-button.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+	<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-typeahead.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/holder/holder.js"></script>
+	<script src="chosen/chosen.js" type="text/javascript"></script>
+	<script type="text/javascript"> $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({allow_single_deselect:true}); </script>
+	<script>
+	$(".chzn-drop").css('top', '50px');
+	</script>
+    
+
 </body>
 </html>
