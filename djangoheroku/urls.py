@@ -11,15 +11,15 @@ urlpatterns = patterns('',
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^weblog/', include('zinnia.urls')),
+    url(r'^post/', include('zinnia.urls')),
     url(r'^comments/', include('django.contrib.comments.urls')),
 
 #    url(r'^', include('zinnia.urls.capabilities')),
 #    url(r'^search/', include('zinnia.urls.search')),
 #    url(r'^sitemap/', include('zinnia.urls.sitemap')),
 #    url(r'^trackback/', include('zinnia.urls.trackback')),
-    url(r'^blog/tags/', include('zinnia.urls.tags')),
-    url(r'^blog/feeds/', include('zinnia.urls.feeds')),
+    url(r'^post/tags/', include('zinnia.urls.tags')),
+    url(r'^post/feeds/', include('zinnia.urls.feeds')),
 #    url(r'^blog/authors/', include('zinnia.urls.authors')),
 #    url(r'^blog/categories/', include('zinnia.urls.categories')),
 #    url(r'^blog/comments/', include('zinnia.urls.comments')),
