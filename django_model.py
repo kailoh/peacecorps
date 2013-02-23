@@ -32,7 +32,7 @@ class Volunteer(models.Model):
     sector = models.ForeignKey(Subsector, verbose_name = "sector of service")
     start_date = models.DateField(verbose_name = "start date of service")
     end_date = models.DateField(verbose_name = "end date of service")
-    email = models.CharField(max_length = 48, verbose_name = "email address")
+    email = models.EmailField()
     language = models.CharField(max_length = 48, verbose_name = "primary language of communication in the field")
     keywords = models.ForeignKey(Keyword, verbose_name = "list of keywords")
     class Meta:
@@ -58,7 +58,7 @@ class Teacher(models.Model):
     last_name = models.CharField(max_length = 48)
     school = models.ForeignKey(School, "school")
     phone = models.CharField(max_length=15, verbose_name="work phone")
-    email = models.CharField(max_length = 48, verbose_name = "email address")
+    email = models.EmailField()
     grade = models.CharField(max_length = 2, verbose_name = "grade of students", choices=GRADES)
     num_students = models.IntegerField(verbose_name = "number of students")
     keywords = models.ForeignKey(Keyword, verbose_name = "list of keywords")
