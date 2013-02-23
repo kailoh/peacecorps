@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+     ('u45127', 'thadknull@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -111,6 +111,10 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
+TEMPLATE_CONTEXT_PROCESSORS= (
+"django.contrib.messages.context_processors.messages"
+}
 
 INSTALLED_APPS = (
     'django.contrib.auth',
