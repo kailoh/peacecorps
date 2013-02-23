@@ -65,11 +65,7 @@ class Teacher(models.Model):
     num_students = models.IntegerField(verbose_name = "number of students")
     keywords = models.ForeignKey(Keyword, verbose_name = "list of keywords")
     class Meta:
-<<<<<<< HEAD
-        app_label = 'test'
+        app_label = 'django_model'
 
 admin.site.register(Teacher)
 admin.site.register(Volunteer)
-=======
-        app_label = 'django_model'
->>>>>>> 82c0a33e3ef3cbf5d253d8d23fe77e60512914cd
